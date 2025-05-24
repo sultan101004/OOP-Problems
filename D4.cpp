@@ -1,53 +1,48 @@
 //#include<iostream>
+//#include<string>
+//#include<cstring>
 //using namespace std;
 //
-//class Personal {
-//	string name;
-//	int age;
-//	string address;
-//	string phoneNo;
-//
-//	void setter(const Personal &other ) {
-//		name = other.name;
-//		age = other.age;
-//		address = other.address;
-//		phoneNo = other.phoneNo;
-//	}
-//
-//	string getName() {
-//		return name;
-//	}
-//	int getAge() {
-//		return age;
-//	}
-//	string getAddress() {
-//		return address;
-//	}
-//	string getPhone() {
-//		return phoneNo;
-//	}
+//class Name {
+//	char* str;
 //
 //public:
-//	Personal(string a = "", int b = 0, string c = "", string d = "") : name(a), age(b), address(c), phoneNo(d) {}
-//
-//	void dispaly()const {
-//
-//		cout << "Name    : " << name << endl;
-//		cout << "Age     : " << age << endl;
-//		cout << "Address : " << address << endl;
-//		cout << "Phone no: " << phoneNo << endl;
-//		cout << endl << endl;
+//	Name() :str(nullptr) {
+//		str = new char[1];
+//		*str = '\0';
 //	}
+//	Name(const char* stri) :str(nullptr) {
+//
+//		if (stri == nullptr || stri[0] == '\0') {
+//			str = new char[1];
+//			str[0] = '\0';
+//		}
+//		else {
+//			str = new char[sizeof(stri) + 1];
+//			strncpy(str, stri, strlen(stri));
+//		}
+//
+//	}
+//	Name(const Name& other) {
+//		str = other.str;
+//	}
+//
+//	void display()const {
+//		cout << "Name is : " << str << endl;
+//	}
+//
+//
 //};
+//
 //int main() {
 //
-//	Personal Me("Sultan Shah", 22, "St1", "03417705189");
-//	Me.dispaly();
-//	
-//	Personal Friend("Usman Bin Yamin", 21, "St3", "03421312312");
-//	Friend.dispaly();
+//	Name empty;
+//	empty.display();
+//	Name Larry("Larry");
+//	Larry.display();
+//	Name Ahmed(Larry);
+//	Ahmed.display();
 //
-//	Personal Abba("HKB", 64, "St1", "03424312434");
-//	Abba.dispaly();
+//
 //	return 0;
 //}

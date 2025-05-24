@@ -1,36 +1,65 @@
 //#include<iostream>
 //using namespace std;
 //
-//class Employee {
-//	string name;
-//	int idNo;
-//	string Dept;
-//	string position;
+//class Square;
+//
+//class Shape {
+//	int area;
 //
 //public:
-//	Employee(string a = "", int b = 0, string c= "", string d = ""): name(a),idNo(b), Dept(c), position(d)  {}
-//
-//	void display() const {
-//		cout << "Name    : " << name << endl;
-//		cout << "ID      : " << idNo << endl;
-//		cout << "Dept    : " << Dept << endl;
-//		cout << "Position: " << position << endl;
-//		cout << endl << endl;
+//	Shape() :area(0) {
+//		cout << "Shape called" << endl;
 //	}
 //
+//	void setArea(const Square& obj);
 //
+//	int getArea()const {
+//		return area;
+//	}
 //
+//	~Shape() {
+//		cout << "Shape destroyed" << endl;
+//	}
 //};
+//
+//
+//class Square {
+//	int x;
+//
+//public:
+//	Square(double a = 0) :x(a) {
+//		cout << "Square called" << endl;
+//		setX();
+//	}
+//
+//	void setX() {
+//		cout << "Enter value for X. " << endl;
+//		cin >> x;
+//	}
+//
+//	int getX()const {
+//		return x;
+//	}
+//
+//	friend void Shape::setArea(const Square&obj);
+//
+//	~Square() {
+//		cout << "Square destroyed" << endl;
+//	}
+//};
+//
+//void Shape::setArea(const Square& obj) {
+//	area = obj.getX() * obj.getX();
+//	cout << "Area : " << area << endl;
+//}
 //
 //int main() {
 //
-//	Employee E1("Sultan Shah", 0637, "Computer Engineering", "CEO");
-//	Employee E2("Abdula ", 1234, "Architectural Engineering", "CEO-ooo");
-//	Employee E3("Usman Yamin", 37, "Dental Care", "Doctor");
-//
-//	E1.display();
-//	E2.display();
-//	E3.display();
+//	Square S1;
+//	Shape S;
+//	S.setArea(S1);
+//	//cin.ignore();
+//	//cin.get();
 //
 //	return 0;
 //}
