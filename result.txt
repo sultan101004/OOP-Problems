@@ -1,0 +1,5 @@
+Sultan 100
+Sudaan 60
+Multan 60
+Shafan 20
+Average :  60
